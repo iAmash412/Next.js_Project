@@ -17,8 +17,8 @@ export default function Home() {
         ipsu morem ipsumlorem ipsu morem ipsumlorem ipsu morem ipsumlorem ipsu
         morem ipsumlorem ipsu morem ipsumlorem ipsu morem ipsum
       </p>
-      <Link href="/portflio">
-        <a>See My Portflio</a>
+      <Link href="/portfolio">
+        <a>See My Portfolio</a>
       </Link>
     </div>
   );
