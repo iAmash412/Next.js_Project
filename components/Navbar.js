@@ -1,25 +1,55 @@
 import Link from 'next/link';
+import { AiOutlineHome } from 'react-icons/ai';
+import { AiOutlineUser } from 'react-icons/ai';
+import { BsFillArchiveFill } from 'react-icons/bs';
+import { BiMessageRoundedDots } from 'react-icons/bi';
+import { BsArrowDownCircle } from 'react-icons/bs';
+import '../styles/Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="logo">
-        <h1>Aafthab Ashraff</h1>
-      </div>
+    <div className="navigation">
       <Link href="/">
-        <a>Home</a>
+        <a>
+          <AiOutlineHome className="icon active-nav" />
+        </a>
       </Link>
       <Link href="/about">
-        <a>About</a>
+        <a>
+          <AiOutlineUser className="icon" />
+        </a>
       </Link>
       <Link href="/portfolio">
-        <a>Portflio</a>
+        <a>
+          <BsFillArchiveFill className="icon" />
+        </a>
       </Link>
-      <Link href="contactme">
-        <a>Contact Me</a>
+      <Link href="/contactme">
+        <a>
+          <BiMessageRoundedDots className="icon" />
+        </a>
       </Link>
-    </nav>
+      <Link href="#footer">
+        <a>
+          <BsArrowDownCircle className="icon" />
+        </a>
+      </Link>
+    </div>
   );
 };
+
+let Icons = document.querySelectorAll('.navigation .icon');
+Icons.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    changeactive();
+    icon.classList.add('active-nav');
+  });
+});
+
+function changeactive() {
+  Icons.forEach((icon) => {
+    icon.classList.remove('actiove-nav');
+  });
+}
 
 export default Navbar;
