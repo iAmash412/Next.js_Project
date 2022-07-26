@@ -38,18 +38,18 @@ const Navbar = () => {
   );
 };
 
-let Icons = document.querySelectorAll('.navigation .icon');
-Icons.forEach((icon) => {
-  icon.addEventListener('click', () => {
-    changeactive();
-    icon.classList.add('active-nav');
-  });
-});
+// let Icons = document.query.SelectorAll('.navigation .icon');
+// Icons.forEach((icon) => {
+//   icon.addEventListener('click', () => {
+//     changeactive();
+//     icon.classList.add('active-nav');
+//   });
+// });
 
-function changeactive() {
-  Icons.forEach((icon) => {
-    icon.classList.remove('actiove-nav');
-  });
-}
+// function changeactive() {
+//   Icons.forEach((icon) => {
+//     icon.classList.remove('active-nav');
+//   });
+// }
 
 export default Navbar;
